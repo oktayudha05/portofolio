@@ -12,6 +12,7 @@ const archivo = Archivo({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'oktayudha05',
+  icons: 'icon.png',
 }
 
 export default function RootLayout({
