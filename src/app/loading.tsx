@@ -2,7 +2,7 @@ export default function Loading() {
   return (
     <div className="flex min-h-screen items-center justify-center">
       <div className="text-center">
-        <p className="font-bold text-white">Loading...</p>
+        <p className="font-bold text-darkBg dark:text-white">Loading...</p>
       </div>
     </div>
   )
