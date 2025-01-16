@@ -13,7 +13,7 @@ export default function About() {
             {`I'm an Information Technology student specializing in Backend
               Development. Based in Magelang, I am passionate about building
               scalable and efficient systems that solve real-world problems.
-              Currently, I'm working with technologies like Node.js, Express,
+              Currently, I'm working with technologies like Express, Gin, 
               MongoDB, and NextJS to sharpen my skills.`}
           </p>
         </div>

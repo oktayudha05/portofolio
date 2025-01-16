@@ -7,7 +7,7 @@ export default function Home() {
     <div className="px-5 pb-10 pt-0">
       <div className="flex flex-col md:flex-row md:justify-between">
         <div className="flex items-center justify-center pb-12 md:hidden">
-          <Avatar imageUrl="https://i.imgur.com/DvnOXHk.jpeg?resize=300:*" />
+          <Avatar imageUrl="https://i.imgur.com/Za4chnq.jpeg?resize=300:*" />
         </div>
         <div className="font-base">
           <h1 className="text-2xl font-heading sm:text-4xl">
@@ -17,27 +17,20 @@ export default function Home() {
 
           <div className="mt-8 text-base sm:text-lg">
             <p>
-              Hi, my name is Oktario Mufti Yudha, backend engineer based in
-              Magelang.
+              Hello, I’m Oktario Mufti Yudha, a dedicated backend engineer with
+              a strong foundation in building efficient and scalable systems.
             </p>
 
             <p>
-              Check the{' '}
-              <a
-                target="_blank"
-                className="font-heading underline"
-                href="https://github.com/oktayudha05/portofolio"
-              >
-                github repo
-              </a>{' '}
-              for more info.
+              Feel free to explore my portfolio to learn more about my
+              expertise, professional journey, and projects I’ve worked on.
             </p>
           </div>
           <Links />
         </div>
 
         <div className="hidden md:inline">
-          <Avatar imageUrl="https://i.imgur.com/DvnOXHk.jpeg?resize=300:*" />
+          <Avatar imageUrl="https://i.imgur.com/Za4chnq.jpeg?resize=300:*" />
         </div>
       </div>
     </div>

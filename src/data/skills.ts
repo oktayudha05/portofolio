@@ -18,10 +18,50 @@ import {
   SiSass,
   SiTailwindcss,
   SiExpress,
+  SiApachehadoop,
+  SiGin,
+  SiGo,
+  SiTypescript,
+  SiRust,
+  SiAjv,
+  SiPython,
+  SiLinux,
+  SiCoffeescript,
+  SiPhp,
+  SiGithub,
 } from '@icons-pack/react-simple-icons'
 
 const SKILLS: { field: string; skills: { skill: string; icon: IconType }[] }[] =
   [
+    {
+      field: 'Programming Language',
+      skills: [
+        {
+          skill: 'typescript',
+          icon: SiTypescript,
+        },
+        {
+          skill: 'go',
+          icon: SiGo,
+        },
+        {
+          skill: 'rust',
+          icon: SiRust,
+        },
+        {
+          skill: 'python',
+          icon: SiPython,
+        },
+        {
+          skill: 'java',
+          icon: SiCoffeescript,
+        },
+        {
+          skill: 'php',
+          icon: SiPhp,
+        },
+      ],
+    },
     {
       field: 'Frontend',
       skills: [
@@ -38,8 +78,8 @@ const SKILLS: { field: string; skills: { skill: string; icon: IconType }[] }[] =
       field: 'Backend',
       skills: [
         {
-          skill: 'nodejs',
-          icon: SiNodedotjs,
+          skill: 'gin',
+          icon: SiGin,
         },
         {
           skill: 'expressjs',
@@ -53,17 +93,31 @@ const SKILLS: { field: string; skills: { skill: string; icon: IconType }[] }[] =
           skill: 'postgresql',
           icon: SiPostgresql,
         },
+      ],
+    },
+
+    {
+      field: 'dev',
+      skills: [
         {
-          skill: 'mysql',
-          icon: SiMysql,
+          skill: 'linux',
+          icon: SiLinux,
+        },
+        {
+          skill: 'docker',
+          icon: SiDocker,
         },
         {
           skill: 'nginx',
           icon: SiNginx,
         },
         {
-          skill: 'docker',
-          icon: SiDocker,
+          skill: 'github',
+          icon: SiGithub,
+        },
+        {
+          skill: 'hadoop',
+          icon: SiApachehadoop,
         },
       ],
     },

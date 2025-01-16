@@ -18,7 +18,7 @@ export default function Links() {
     },
     {
       icon: SiLinkedin,
-      href: 'https://www.linkedin.com/in/oktario-mufti-yudha-20188323b/',
+      href: 'https://www.linkedin.com/in/oktayudha05',
     },
     {
       icon: SiGmail,
