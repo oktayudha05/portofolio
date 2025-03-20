@@ -1,11 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    experimental: {
-        outputStandalone: true, // Optional, hanya untuk standalone builds
-    },
-    serverRuntimeConfig: {
-        trustProxy: true, // Mengizinkan X-Forwarded-Proto untuk mendeteksi HTTPS
-    },
-};
+  experimental: {
+    outputStandalone: true,
+  },
+  serverRuntimeConfig: {
+    trustProxy: true,
+  },
+}
 
 export default nextConfig;

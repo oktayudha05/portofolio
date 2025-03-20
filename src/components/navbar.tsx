@@ -18,8 +18,8 @@ export default function Navbar() {
       text: 'About',
     },
     {
-      path: '/work',
-      text: 'Work',
+      path: '/projects',
+      text: 'Projects',
     },
   ]
 
