@@ -6,13 +6,27 @@ import { ViewTransitions } from 'next-view-transitions'
 import { ThemeProvider } from '@/components/theme-provider'
 import Loading from './loading'
 import { Suspense } from 'react'
+import clientPromise from '@/lib/mongodb'
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 const archivo = Archivo({ subsets: ['latin'] })
 
-export const metadata: Metadata = {
-  title: 'oktayudha05',
-  icons: 'icon.png',
+export async function generateMetadata(): Promise<Metadata> {
+  const client = await clientPromise
+  const db = client.db('portfolio')
+  const siteData = await db.collection('home').findOne({})
+
+  return {
+    title: {
+      template: (siteData?.name || 'Oktario Mufti Yudha') + ' | %s',
+      default: (siteData?.name || 'Oktario Mufti Yudha') + ' | Portfolio',
+    },
+    icons: {
+      icon: siteData?.favicon || '/icon.png',
+      apple: siteData?.appleTouchIcon || '/apple-touch-icon.png',
+      shortcut: siteData?.favicon || '/favicon-32x32.png',
+    },
+  }
 }
 
 export default function RootLayout({
@@ -29,7 +43,7 @@ export default function RootLayout({
           <ThemeProvider attribute="class" disableTransitionOnChange>
             <Suspense fallback={<Loading />}>
               <Navbar />
-              <div className="mx-auto w-[750px] max-w-full  text-text dark:text-darkText md:w-[1000px] ">
+              <div className="mx-auto w-[750px] max-w-full text-text dark:text-darkText md:w-[1000px]">
                 {children}
               </div>
             </Suspense>
