@@ -6,6 +6,11 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Projects',
+  description:
+    'Projects of Oktario Mufti Yudha – Implementation of Backend and IoT Projects Developed Using Modern Technologies.',
+  alternates: {
+    canonical: '/projects',
+  },
 }
 
 interface Project {
