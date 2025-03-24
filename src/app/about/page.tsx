@@ -6,6 +6,11 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'About',
+  description:
+    'Complete Profile of Oktario Mufti Yudha – A Backend Developer with Experience in Building Scalable Systems and IoT Solutions',
+  alternates: {
+    canonical: '/about',
+  },
 }
 
 export default async function About() {

@@ -16,19 +16,34 @@ export async function generateMetadata(): Promise<Metadata> {
   const db = client.db('portfolio')
   const siteData = await db.collection('home').findOne({})
 
+  const defaultMetadata = {
+    title: 'Oktario Mufti Yudha | Portfolio',
+    description:
+      'Portfolio Oktario Mufti Yudha - Backend Developer and IoT Engineer',
+  }
+
   return {
     metadataBase: new URL('https://oyudha.me'),
+    title: {
+      template: `${siteData?.name || 'Oktario Mufti Yudha'}` + ` | %s`,
+      default: siteData?.name
+        ? `${siteData.name} | Portfolio`
+        : defaultMetadata.title,
+    },
+    description: siteData?.metaDescription || defaultMetadata.description,
     alternates: {
       canonical: '/',
-    },
-    title: {
-      template: (siteData?.name || 'Oktario Mufti Yudha') + ' | %s',
-      default: (siteData?.name || 'Oktario Mufti Yudha') + ' | Portfolio',
     },
     icons: {
       icon: siteData?.favicon || '/icon.png',
       apple: siteData?.appleTouchIcon || '/apple-touch-icon.png',
       shortcut: siteData?.favicon || '/favicon-32x32.png',
+    },
+    openGraph: {
+      type: 'website',
+      locale: 'en_US',
+      url: 'https://oyudha.me',
+      siteName: siteData?.name || 'Oktario Mufti Yudha',
     },
   }
 }
