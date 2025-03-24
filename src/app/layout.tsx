@@ -17,6 +17,10 @@ export async function generateMetadata(): Promise<Metadata> {
   const siteData = await db.collection('home').findOne({})
 
   return {
+    metadataBase: new URL('https://oyudha.me'),
+    alternates: {
+      canonical: '/',
+    },
     title: {
       template: (siteData?.name || 'Oktario Mufti Yudha') + ' | %s',
       default: (siteData?.name || 'Oktario Mufti Yudha') + ' | Portfolio',
